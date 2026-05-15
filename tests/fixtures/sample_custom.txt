@@ -1,0 +1,24 @@
+Name: TestCustom
+Days: 5
+Periods_per_day: 4
+
+COURSES:
+Algo T1 2 2 30 0
+Stats T2 2 2 25 0
+AlgoTD T1 1 1 30 1
+DBLab T3 1 1 20 2
+
+ROOMS:
+A1 50 0 0.0 0.0
+A2 35 0 10.0 0.0
+TD1 35 1 5.0 5.0
+L1 25 2 5.0 10.0
+
+CURRICULA:
+CS1 4 Algo Stats AlgoTD DBLab
+
+UNAVAILABILITY_CONSTRAINTS:
+Algo 0 0
+Algo 0 1
+
+END.

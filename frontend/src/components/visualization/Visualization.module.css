@@ -1,0 +1,85 @@
+.container {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-7);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5) var(--space-7);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.header h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.stats {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.statLabel {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+}
+
+.statValue {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: var(--mono);
+  color: var(--black);
+  letter-spacing: -0.02em;
+}
+
+.canvas {
+  width: 100%;
+  height: 500px;
+  background: #0a0a0a;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-7);
+  border-top: 1px solid var(--gray-200);
+}
+
+.legendLabel {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.legendGood {
+  color: var(--success);
+}
+
+.legendBad {
+  color: var(--accent);
+}
+
+.gradientBar {
+  flex: 1;
+  max-width: 160px;
+  height: 3px;
+  background: linear-gradient(to right, #16a34a, #ca8a04, #e63946);
+}

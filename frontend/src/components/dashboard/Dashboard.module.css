@@ -1,0 +1,214 @@
+/* Shared styling for dashboard widgets. */
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 6px;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: var(--space-3);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--black);
+}
+
+.cardHint {
+  font-size: 11px;
+  color: var(--gray-500);
+}
+
+.row {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  color: var(--black);
+  padding: var(--space-2) var(--space-4);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--theme-transition);
+}
+.btn:hover:not(:disabled) {
+  background: var(--gray-100);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btnPrimary {
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+.btnPrimary:hover:not(:disabled) {
+  background: var(--gray-700);
+}
+.btnAccent {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+/* ─── Sliders ─────────────────────────────────────────────── */
+.sliderRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+.sliderLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--gray-600);
+  margin-bottom: 4px;
+}
+.sliderLabel strong {
+  color: var(--black);
+  font-family: var(--mono);
+  font-weight: 600;
+}
+.slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.sliderValue {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--black);
+  min-width: 48px;
+  text-align: right;
+}
+
+/* ─── Heatmap ─────────────────────────────────────────────── */
+.heatmapWrap {
+  overflow-x: auto;
+}
+.heatmap {
+  border-collapse: collapse;
+  font-size: 11px;
+  font-family: var(--mono);
+}
+.heatmap th, .heatmap td {
+  border: 1px solid var(--gray-200);
+  padding: 4px 6px;
+  text-align: center;
+  min-width: 56px;
+  height: 28px;
+  white-space: nowrap;
+}
+.heatmap th {
+  background: var(--gray-100);
+  color: var(--gray-700);
+  font-weight: 600;
+}
+.heatmap th.rowHeader {
+  text-align: left;
+  position: sticky;
+  left: 0;
+}
+.heatmap td.empty {
+  color: var(--gray-300);
+}
+
+/* ─── Status tags ─────────────────────────────────────────── */
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: var(--gray-100);
+  color: var(--gray-700);
+}
+.tagOk { background: var(--success); color: var(--white); }
+.tagErr { background: var(--accent); color: var(--white); }
+.tagWarn { background: var(--warning); color: var(--white); }
+
+/* ─── Form bits ───────────────────────────────────────────── */
+.fileInput {
+  border: 1px dashed var(--gray-300);
+  padding: var(--space-3);
+  border-radius: 4px;
+  font-size: 12px;
+  background: var(--gray-50);
+  width: 100%;
+}
+.select, .input {
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  color: var(--black);
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  font-family: var(--font);
+}
+
+.error {
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: var(--space-3);
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: var(--space-3);
+}
+.summaryItem {
+  background: var(--gray-100);
+  padding: var(--space-3);
+  border-radius: 4px;
+}
+.summaryValue {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--mono);
+}
+.summaryLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+}
+
+/* ─── Dashboard grid ──────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-5);
+}
+.col6 { grid-column: span 6; }
+.col12 { grid-column: span 12; }
+@media (max-width: 1100px) {
+  .col6 { grid-column: span 12; }
+}

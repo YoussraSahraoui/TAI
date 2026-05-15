@@ -1,0 +1,11 @@
+__pycache__/
+
+.claude/
+
+CLAUDE.md
+
+*.egg-info/
+
+.ipynb_checkpoints
+
+cache/

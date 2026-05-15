@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Swiss palette — light (default) */
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray-50: #fafafa;
+  --gray-100: #f5f5f5;
+  --gray-200: #e5e5e5;
+  --gray-300: #d4d4d4;
+  --gray-400: #a3a3a3;
+  --gray-500: #737373;
+  --gray-600: #525252;
+  --gray-700: #404040;
+  --gray-800: #262626;
+  --gray-900: #171717;
+  --accent: #e63946;
+  --accent-light: #fef2f2;
+  --success: #16a34a;
+  --warning: #ca8a04;
+  --theme-transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
+
+  /* Stable tokens — do NOT flip in dark mode. Use these for inverse surfaces
+     like the sidebar, or any element that should remain dark-on-light in
+     both themes. */
+  --ink: #0a0a0a;
+  --ink-soft: #1a1a1a;
+  --paper: #ffffff;
+
+  /* Typography */
+  --font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --mono: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 48px;
+  --space-10: 64px;
+
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--black);
+  background: var(--gray-50);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  color-scheme: light;
+}
+
+/* Swiss palette — dark mode override (token flip) */
+:root[data-theme="dark"] {
+  --black: #f5f5f5;
+  --white: #0a0a0a;
+  --gray-50: #141414;
+  --gray-100: #1c1c1c;
+  --gray-200: #2a2a2a;
+  --gray-300: #3a3a3a;
+  --gray-400: #525252;
+  --gray-500: #8a8a8a;
+  --gray-600: #a3a3a3;
+  --gray-700: #d4d4d4;
+  --gray-800: #e5e5e5;
+  --gray-900: #f5f5f5;
+  --accent: #ff5b6b;
+  --accent-light: #2a1014;
+  color-scheme: dark;
+}
+
+/* Smooth page-level theme transition; other elements snap.
+   Done on html via the `theme-animate` class so the user sees a brief crossfade. */
+html.theme-animate,
+html.theme-animate body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: var(--font);
+}
+
+/* Utility: uppercase tracking */
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}

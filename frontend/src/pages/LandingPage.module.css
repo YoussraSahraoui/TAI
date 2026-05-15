@@ -1,0 +1,662 @@
+/* ---------------------------------------------------------------- */
+/* Root                                                             */
+/* ---------------------------------------------------------------- */
+.root {
+  position: relative;
+  min-height: 500vh;
+  background: var(--white);
+  color: var(--black);
+  --nav-height: 64px;
+}
+
+.canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------------------------------------------------------------- */
+/* Top nav                                                          */
+/* ---------------------------------------------------------------- */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-4) var(--space-8);
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  color: var(--black);
+  height: var(--nav-height);
+  box-sizing: border-box;
+}
+
+.navLogo {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.navAccent {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.navLinks {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.navLink {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.navLink:hover { opacity: 0.6; }
+
+.navEnter {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid currentColor;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.navEnter:hover {
+  background: var(--accent);
+  color: var(--white);
+  border-color: var(--accent);
+}
+
+/* ---------------------------------------------------------------- */
+/* Scroll sections                                                  */
+/* ---------------------------------------------------------------- */
+.section {
+  width: 100%;
+  height: 100vh;
+  padding: 0 var(--space-9);
+  display: flex;
+  align-items: center;
+  position: relative;
+  pointer-events: none;
+}
+
+.section > * { pointer-events: auto; }
+
+.sectionInner {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-family: var(--mono);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent);
+}
+
+/* ---------------------------------------------------------------- */
+/* Hero                                                             */
+/* ---------------------------------------------------------------- */
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+}
+
+.heroTitle {
+  font-size: clamp(40px, 8vw, 128px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  margin: 0;
+  white-space: pre;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+.heroTitle .accent {
+  color: var(--accent);
+}
+
+.heroCursor {
+  display: inline-block;
+  width: 0.06em;
+  min-width: 4px;
+  height: 0.78em;
+  background: var(--accent);
+  margin: 0 0.04em;
+  align-self: center;
+  animation: caretBlink 1s steps(2) infinite;
+  flex-shrink: 0;
+}
+
+@keyframes caretBlink {
+  0%, 49.99% { opacity: 1; }
+  50%, 100%  { opacity: 0; }
+}
+
+@media (max-width: 700px) {
+  .heroTitle { font-size: clamp(36px, 12vw, 64px); }
+}
+
+.heroSub {
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray-600);
+  margin-top: var(--space-5);
+}
+
+.heroMeta {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--gray-300);
+  max-width: 720px;
+}
+
+.heroMetaItem {
+  font-size: 11px;
+  font-family: var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroMetaItem strong {
+  display: block;
+  font-size: 20px;
+  color: var(--black);
+  margin-bottom: 2px;
+  letter-spacing: -0.02em;
+}
+
+.heroMetaItem span {
+  color: var(--gray-500);
+}
+
+/* ---------------------------------------------------------------- */
+/* Text section                                                     */
+/* ---------------------------------------------------------------- */
+.textSection {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.secIdx {
+  font-family: var(--mono);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  color: var(--accent);
+}
+
+.secContent h2 {
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--space-6);
+  font-weight: 700;
+}
+
+.secContent p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  max-width: 640px;
+  margin: 0;
+}
+
+.secContent p + p {
+  margin-top: var(--space-4);
+}
+
+/* ---------------------------------------------------------------- */
+/* Feature grid                                                     */
+/* ---------------------------------------------------------------- */
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0;
+  margin-top: var(--space-8);
+  border-top: 2px solid var(--black);
+  border-left: 1px solid var(--gray-300);
+}
+
+.feature {
+  padding: var(--space-6) var(--space-5);
+  border-right: 1px solid var(--gray-300);
+  border-bottom: 1px solid var(--gray-300);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+.featureIdx {
+  font-size: 10px;
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.featureTitle {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 var(--space-2);
+}
+
+.featureDesc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* CTA                                                              */
+/* ---------------------------------------------------------------- */
+.cta {
+  text-align: center;
+  width: 100%;
+}
+
+.ctaTitle {
+  font-size: clamp(40px, 8vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0 0 var(--space-7);
+  font-weight: 700;
+}
+
+.ctaSub {
+  font-size: 15px;
+  color: var(--gray-600);
+  margin-bottom: var(--space-8);
+}
+
+.ctaBtn {
+  display: inline-block;
+  padding: var(--space-4) var(--space-9);
+  background: var(--black);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--black);
+  transition: background 0.15s, color 0.15s;
+}
+
+.ctaBtn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--white);
+}
+
+/* ---------------------------------------------------------------- */
+/* Scroll cue                                                       */
+/* ---------------------------------------------------------------- */
+.scrollCue {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  pointer-events: none;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, var(--gray-500));
+  animation: scrollHint 2s ease-in-out infinite;
+}
+
+@keyframes scrollHint {
+  0%, 100% { transform: scaleY(0.4); transform-origin: top; opacity: 0.4; }
+  50%      { transform: scaleY(1);   transform-origin: top; opacity: 1; }
+}
+
+/* ---------------------------------------------------------------- */
+/* Progress indicator                                               */
+/* ---------------------------------------------------------------- */
+.progress {
+  position: fixed;
+  right: var(--space-6);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  pointer-events: none;
+}
+
+.progressDot {
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--gray-400);
+  background: transparent;
+  transition: background 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.progressDotActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.5);
+}
+
+/* ---------------------------------------------------------------- */
+/* Footer line                                                      */
+/* ---------------------------------------------------------------- */
+.footerLine {
+  position: absolute;
+  bottom: var(--space-6);
+  left: var(--space-9);
+  right: var(--space-9);
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+}
+
+@media (max-width: 900px) {
+  .textSection { grid-template-columns: 1fr; gap: var(--space-4); }
+  .section { padding: 0 var(--space-6); }
+  .heroMeta { flex-direction: column; gap: var(--space-4); }
+}
+
+/* ---------------------------------------------------------------- */
+/* Team slider — horizontal scroll driven by vertical scroll        */
+/* ---------------------------------------------------------------- */
+.teamWrapper {
+  position: relative;
+  height: 600vh;
+  background: var(--white);
+}
+
+.teamSticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--white);
+  border-top: 1px solid var(--gray-200);
+}
+
+.teamHeader {
+  position: absolute;
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-5) var(--space-9);
+  pointer-events: none;
+  border-bottom: 1px solid var(--gray-100);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.teamHeader .eyebrow {
+  margin-bottom: 0;
+}
+
+.teamProgress {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--gray-500);
+}
+
+.teamProgress strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.teamTrack {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  will-change: transform;
+}
+
+.teamSlide {
+  width: 100vw;
+  flex-shrink: 0;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(320px, 460px) 1fr;
+  column-gap: var(--space-9);
+  padding: calc(var(--nav-height) + 80px) var(--space-9) 100px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.photoCol {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+}
+
+.photoCol::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 32px;
+  height: 4px;
+  background: var(--accent);
+  z-index: 1;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.05);
+  display: block;
+  transition: filter 0.5s;
+}
+
+.teamSlide:hover .photo {
+  filter: grayscale(0%) contrast(1);
+}
+
+.contentCol {
+  display: flex;
+  flex-direction: column;
+  max-width: 580px;
+}
+
+.teamIdx {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.teamIdx::before {
+  content: "";
+  width: 32px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.teamName {
+  font-size: clamp(40px, 6vw, 80px);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  margin: 0 0 var(--space-4);
+  color: var(--black);
+}
+
+.teamRole {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--gray-300);
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.teamBio {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--gray-700);
+  margin: 0 0 var(--space-6);
+}
+
+.subEyebrow {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  font-family: var(--mono);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.subEyebrow::before {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--gray-400);
+}
+
+.roleDesc {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.teamDots {
+  position: absolute;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.teamDot {
+  width: 24px;
+  height: 2px;
+  background: var(--gray-300);
+  transition: background 0.3s, width 0.3s;
+}
+
+.teamDotActive {
+  background: var(--accent);
+  width: 56px;
+}
+
+.teamHint {
+  position: absolute;
+  bottom: var(--space-8);
+  right: var(--space-9);
+  z-index: 2;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  font-family: var(--mono);
+}
+
+@media (max-width: 900px) {
+  .teamSlide {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(200px, 40vh) 1fr;
+    padding: 100px var(--space-6) 100px;
+    row-gap: var(--space-6);
+  }
+  .photoCol { max-width: 240px; }
+  .teamHint { display: none; }
+}
+

@@ -1,0 +1,200 @@
+.card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  margin-bottom: var(--space-7);
+}
+
+.cardHeader {
+  padding: var(--space-5) var(--space-7);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.cardHeader h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 12px;
+  color: var(--gray-400);
+  margin-top: var(--space-1);
+}
+
+.scroller {
+  overflow-x: auto;
+  padding: var(--space-5);
+}
+
+.grid {
+  border-collapse: collapse;
+  font-size: 11px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.grid th,
+.grid td {
+  border: 1px solid var(--gray-200);
+  padding: 6px 8px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.dayHeader {
+  background: var(--gray-100, #f5f5f5);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  color: var(--gray-500);
+  font-weight: 600;
+}
+
+.slotHeader {
+  background: var(--gray-50, #fafafa);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.roomHeader {
+  background: var(--gray-50, #fafafa);
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  color: var(--gray-500);
+  width: 110px;
+}
+
+.roomCell {
+  text-align: left;
+  font-weight: 600;
+  background: var(--gray-50, #fafafa);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cap {
+  display: block;
+  font-family: var(--mono);
+  font-weight: 400;
+  color: var(--gray-400);
+  font-size: 10px;
+}
+
+.cell {
+  color: #fff;
+  min-width: 80px;
+  height: 56px;
+  cursor: help;
+}
+
+.cellLabel {
+  display: block;
+  font-weight: 600;
+  font-size: 11px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cellMeta {
+  display: block;
+  font-size: 9px;
+  opacity: 0.8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 4px,
+    var(--gray-100, #f5f5f5) 4px,
+    var(--gray-100, #f5f5f5) 5px
+  );
+}
+
+.bigCell {
+  vertical-align: top;
+  padding: 6px;
+  background: var(--white);
+  min-width: 160px;
+  height: 96px;
+}
+
+.sessionStack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sessionPill {
+  background: var(--gray-50, #fafafa);
+  border-left: 3px solid #444;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 11px;
+  color: var(--black);
+}
+
+.sessionTitle {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sessionMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+  font-size: 10px;
+  color: var(--gray-500);
+}
+
+.sessionRoom {
+  font-family: var(--mono);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sessionGroup {
+  margin-top: 1px;
+  font-size: 10px;
+  font-family: var(--mono);
+  color: var(--gray-500);
+}
+
+.legend {
+  display: flex;
+  gap: var(--space-5);
+  padding: var(--space-3) var(--space-7);
+  border-top: 1px solid var(--gray-200);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-500);
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}

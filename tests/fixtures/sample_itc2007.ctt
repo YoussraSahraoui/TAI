@@ -1,0 +1,26 @@
+Name: TestITC
+Courses: 3
+Rooms: 2
+Days: 5
+Periods_per_day: 4
+Curricula: 2
+Constraints: 2
+
+COURSES:
+SceCosC Ocra 3 3 30
+ArcTec Indaco 2 2 25
+TecCos Rosa 2 2 20
+
+ROOMS:
+rA 50
+rB 35
+
+CURRICULA:
+Cur01 2 SceCosC ArcTec
+Cur02 2 ArcTec TecCos
+
+UNAVAILABILITY_CONSTRAINTS:
+TecCos 0 0
+TecCos 4 3
+
+END.
