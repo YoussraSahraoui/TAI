@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.entities import TimeslotConfig
-from backend.models.schemas import TimeslotCreate, TimeslotResponse
+from models.database import get_db
+from models.entities import TimeslotConfig
+from models.schemas import TimeslotCreate, TimeslotResponse
 
 router = APIRouter(prefix="/api/timeslots", tags=["timeslots"])
 
