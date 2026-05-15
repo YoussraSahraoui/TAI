@@ -43,7 +43,7 @@ from models.entities import (
     TimeslotConfig,
     Unavailability,
 )
-from src.core.problem import CourseRoomAllocationProblem
+from ..src.core.problem import CourseRoomAllocationProblem
 
 
 _COURSE_TYPE = {
