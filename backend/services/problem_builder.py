@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from sqlalchemy.orm import Session
 
-from backend.models.entities import (
+from models.entities import (
     ConstraintConfig,
     Course,
     Curriculum,
