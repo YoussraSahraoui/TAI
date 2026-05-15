@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.entities import Course, Curriculum
-from backend.models.schemas import CurriculumCreate, CurriculumResponse
+from models.database import get_db
+from models.entities import Course, Curriculum
+from models.schemas import CurriculumCreate, CurriculumResponse
 
 router = APIRouter(prefix="/api/curricula", tags=["curricula"])
 
