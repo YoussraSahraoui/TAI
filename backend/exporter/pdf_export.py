@@ -23,7 +23,7 @@ from reportlab.platypus import (
     TableStyle,
 )
 
-from backend.services.results_cache import CachedResult
+from services.results_cache import CachedResult
 
 
 def render_pdf(cached: CachedResult) -> bytes:

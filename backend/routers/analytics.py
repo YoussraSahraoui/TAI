@@ -1,13 +1,13 @@
 from fastapi import APIRouter, HTTPException
 
-from backend.models.schemas import AnalyticsResponse
-from backend.services.analytics_service import (
+from models.schemas import AnalyticsResponse
+from services.analytics_service import (
     get_advisory,
     get_bottlenecks,
     get_fitness_curve,
     get_utilization,
 )
-from backend.services.job_manager import job_manager
+from services.job_manager import job_manager
 
 router = APIRouter(prefix="/api/analytics", tags=["analytics"])
 

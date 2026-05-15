@@ -10,7 +10,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Optional
 
-from src.core.problem import CourseRoomAllocationProblem
+from core.problem import CourseRoomAllocationProblem
 
 
 State = dict[int, tuple[int, int]]

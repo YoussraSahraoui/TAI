@@ -8,7 +8,7 @@ from __future__ import annotations
 
 from sqlalchemy.orm import Session
 
-from backend.models.entities import (
+from models.entities import (
     ConstraintConfig,
     Course,
     Curriculum,
@@ -16,7 +16,7 @@ from backend.models.entities import (
     ScheduleConfig,
     Unavailability,
 )
-from src.core.problem import CourseRoomAllocationProblem
+from core.problem import CourseRoomAllocationProblem
 
 
 def build_problem(db: Session) -> CourseRoomAllocationProblem:

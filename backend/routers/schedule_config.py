@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.entities import ScheduleConfig
-from backend.models.schemas import ScheduleConfigResponse, ScheduleConfigUpdate
+from models.database import get_db
+from models.entities import ScheduleConfig
+from models.schemas import ScheduleConfigResponse, ScheduleConfigUpdate
 
 router = APIRouter(prefix="/api/schedule-config", tags=["schedule-config"])
 

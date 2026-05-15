@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.entities import Course, ScheduleConfig, Unavailability
-from backend.models.schemas import UnavailabilityCreate, UnavailabilityResponse
+from models.database import get_db
+from models.entities import Course, ScheduleConfig, Unavailability
+from models.schemas import UnavailabilityCreate, UnavailabilityResponse
 
 router = APIRouter(prefix="/api/unavailability", tags=["unavailability"])
 

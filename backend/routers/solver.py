@@ -20,16 +20,16 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.schemas import (
+from models.database import get_db
+from models.schemas import (
     AssignmentPoint,
     JobSummary,
     SolveRequest,
     SolveResponse,
     StateResponse,
 )
-from backend.services.job_manager import job_manager
-from backend.services.solver_service import build_problem_from_db
+from services.job_manager import job_manager
+from services.solver_service import build_problem_from_db
 
 router = APIRouter(tags=["solver"])
 

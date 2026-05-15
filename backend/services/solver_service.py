@@ -30,7 +30,7 @@ from collections import OrderedDict, defaultdict
 
 from sqlalchemy.orm import Session, joinedload
 
-from backend.models.entities import (
+from models.entities import (
     ConstraintConfig,
     Course,
     Curriculum,
@@ -43,7 +43,7 @@ from backend.models.entities import (
     TimeslotConfig,
     Unavailability,
 )
-from src.core.problem import CourseRoomAllocationProblem
+from core.problem import CourseRoomAllocationProblem
 
 
 _COURSE_TYPE = {

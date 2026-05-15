@@ -7,11 +7,11 @@ from typing import Literal
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.schemas import UploadSummary
-from backend.parser import parse_custom, parse_itc2007, wipe_and_persist
-from backend.parser.types import ParsedDataset
-from src.core.problem import CourseRoomAllocationProblem
+from models.database import get_db
+from models.schemas import UploadSummary
+from parser import parse_custom, parse_itc2007, wipe_and_persist
+from parser.types import ParsedDataset
+from core.problem import CourseRoomAllocationProblem
 
 router = APIRouter(prefix="/api/upload", tags=["upload"])
 

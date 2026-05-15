@@ -10,8 +10,8 @@ from __future__ import annotations
 
 import math
 
-from backend.models.schemas import ConstraintViolation, FitnessCurvePoint
-from backend.services.job_manager import SolverJob
+from models.schemas import ConstraintViolation, FitnessCurvePoint
+from services.job_manager import SolverJob
 
 
 def get_fitness_curve(job: SolverJob) -> list[FitnessCurvePoint]:
