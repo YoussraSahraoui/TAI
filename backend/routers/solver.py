@@ -20,8 +20,8 @@ import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.schemas import (
+from models.database import get_db
+from models.schemas import (
     AssignmentPoint,
     JobSummary,
     SolveRequest,
