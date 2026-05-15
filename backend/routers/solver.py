@@ -28,8 +28,8 @@ from backend.models.schemas import (
     SolveResponse,
     StateResponse,
 )
-from backend.services.job_manager import job_manager
-from backend.services.solver_service import build_problem_from_db
+from services.job_manager import job_manager
+from bservices.solver_service import build_problem_from_db
 
 router = APIRouter(tags=["solver"])
 
