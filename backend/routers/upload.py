@@ -11,7 +11,11 @@ from models.database import get_db
 from models.schemas import UploadSummary
 from parser import parse_custom, parse_itc2007, wipe_and_persist
 from parser.types import ParsedDataset
+<<<<<<< HEAD
 from core.problem import CourseRoomAllocationProblem
+=======
+from src.core.problem import CourseRoomAllocationProblem
+>>>>>>> a1ff24e2ad1806633bfd24d6d291242214fcc805
 
 router = APIRouter(prefix="/api/upload", tags=["upload"])
 
