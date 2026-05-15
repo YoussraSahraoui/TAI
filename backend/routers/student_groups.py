@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.entities import StudentGroup
-from backend.models.schemas import StudentGroupCreate, StudentGroupResponse
+from models.database import get_db
+from models.entities import StudentGroup
+from models.schemas import StudentGroupCreate, StudentGroupResponse
 
 router = APIRouter(prefix="/api/student-groups", tags=["student-groups"])
 
