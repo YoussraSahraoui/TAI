@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
-from backend.models.database import get_db
-from backend.models.entities import ConstraintConfig
-from backend.models.schemas import ConstraintResponse, ConstraintUpdate
+from models.database import get_db
+from models.entities import ConstraintConfig
+from models.schemas import ConstraintResponse, ConstraintUpdate
 
 router = APIRouter(prefix="/api/constraints", tags=["constraints"])
 
