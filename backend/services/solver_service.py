@@ -45,7 +45,7 @@ from models.entities import (
 )
 from core.problem import CourseRoomAllocationProblem
 
-from ..src.core.problem import CourseRoomAllocationProblem
+from ...src.core.problem import CourseRoomAllocationProblem
 
 
 
