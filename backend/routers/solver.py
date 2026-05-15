@@ -29,7 +29,7 @@ from models.schemas import (
     StateResponse,
 )
 from services.job_manager import job_manager
-from bservices.solver_service import build_problem_from_db
+from services.solver_service import build_problem_from_db
 
 router = APIRouter(tags=["solver"])
 
